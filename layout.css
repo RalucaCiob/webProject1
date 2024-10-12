@@ -1,0 +1,157 @@
+body {
+	/* Set some background color or image */
+	background-color: #f5f5f5; /* Light gray background */
+	font-family: Arial, sans-serif; /* Default font */
+	margin: 0; /* Remove default margin */
+  }
+  
+  form {
+	margin: auto; /* Center the form horizontally */
+	width: 40%; /* Maintain form width */
+	border: 1px solid #ccc; /* Lighter border color */
+	padding: 20px; /* Add some padding */
+	text-align: center;
+  }
+  
+  .nologin {
+	width: 80%;
+	margin: 40px auto;
+	border: 3px solid red;
+	background: lightblue;
+	font-size: 1.5em; /* Reduce font size slightly */
+	font-weight: bold;
+	font-family: monospace;
+	font-variant: small-caps;
+	text-align: center;
+	color: blue;
+	padding: 20px; /* Reduce padding slightly */
+  }
+  
+  h1 
+  {
+	font-variant: normal;
+	color: blue;
+	text-align: center;
+	margin-top: 0; /* Remove top margin */
+  }
+  
+  h2 
+  {
+	font-size: 1em; /* Reduce font size */
+	color: red;
+	text-align: center;
+  }
+   
+  h3 
+  {
+	font-size: 1.2em; /* Reduce font size */
+	color: red;
+	text-align: center;
+  }
+  
+  
+  .errorstyle {
+	font-size: 1.2em;
+	color: red;
+	text-align: center;
+  }
+  
+  label {
+	display: inline-block; /* Make labels appear on separate lines */
+	width: 130px;
+	text-align: left;
+	margin-bottom: 5px; /* Add some space between label and input */
+  }
+  
+  input {
+	margin-left: 0; /* Remove left margin */
+	width: 70%; /* Make inputs fill half the available width */
+	padding: 10px; /* Add some padding for better user experience */
+  }
+  
+  /* Logo Styling (assuming your logo is an image named "logo.png") */
+  .logo {
+	text-align: center; /* Center the logo horizontally */
+	margin: 20px 0; /* Add some space above and below the logo */
+  }
+  
+  .logo img {
+	width: 200px; /* Adjust width based on your logo size */
+	height: auto; /* Maintain aspect ratio */
+  }
+
+button, input[type=submit] 
+{
+    /* Style buttons with background color, text color, padding, border, border-radius, cursor, and font size */
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+	width: 20%;
+	margin-bottom: 10px;
+}
+
+/* Using a flexbox layout to ensure the buttons are evenly spaced and aligned vertically */
+div 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Styling for the textarea input field where user can enter the problem description */
+textarea 
+{
+	height: 100px; /* Adjust the height value as needed */
+	width: 400px;
+}
+
+
+/* Styling for the table element shown on the view open tickets page */ 
+table 
+{
+	margin: 0 auto;
+	text-align: center;
+}
+  
+th, td 
+{
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+  
+th 
+{
+	background-color: #f0f0f0;
+}
+  
+td 
+{
+	background-color: #fff;
+}
+
+.home-button, .logout-button 
+{
+	margin: 0 auto;
+	display: block;
+	width: 15%;	
+}
+
+/* Styling to show that form submit buttons are disabled */
+input[type="submit"]:disabled 
+{
+    background-color: #ccc; /* gray color */
+    opacity: 0.5; /* optional: make the button slightly transparent */
+    cursor: not-allowed; /* optional: change the cursor to indicate the button is disabled */
+}
+
+/* Styling to show that form buttons are disabled */
+button:disabled 
+{
+    background-color: #ccc; /* gray color */
+    opacity: 0.5; /* optional: make the button slightly transparent */
+    cursor: not-allowed; /* optional: change the cursor to indicate the button is disabled */
+}
