@@ -52,7 +52,14 @@ if((isset($_POST['loginName'])) && (isset($_POST['password'])))
             $_SESSION['user'] = $_POST['loginName']; // Session variable to keep track of the login name for use with Change Password screen
             $row = mysqli_fetch_assoc($result);
             $_SESSION['supportLevel'] = $row['supportLevel'];
-            header("Location: manageTickets.html.php"); 
+            if ($_SESSION['supportLevel'] == 1)
+            {
+                header("Location: manageElevatedTickets.html.php");
+            }
+            else
+            {
+                header("Location: manageTickets.html.php"); 
+            } 
             exit();      
         } 
     }

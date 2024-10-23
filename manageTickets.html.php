@@ -142,8 +142,8 @@
             $reasonForElevation = $_POST['elevate-text'];
             $ticketId = $tickets[$currentTicket]['ticketId'];
             // Prepare the SQL statement to insert the new record into the elevated_tickets table
-            $sql = "INSERT INTO elevated_tickets  (elevatedTicketId, reasonForElevation, elevatedBy, assignedSupportLevel, dateCreated)
-                    VALUES ('$ticketId', '$reasonForElevation', '".$_SESSION['user']."', " . ($_SESSION['supportLevel'] + 1) . ", NOW())";
+            $sql = "INSERT INTO elevated_tickets  (elevatedTicketId, reasonForElevation, elevatedBy, assignedSupportLevel, dateCreated, openStatus)
+                    VALUES ('$ticketId', '$reasonForElevation', '".$_SESSION['user']."', " . ($_SESSION['supportLevel'] + 1) . ", NOW(), true)";
 
             // Execute the statement
             $result = mysqli_query($con, $sql);
@@ -190,6 +190,11 @@
         <link rel="stylesheet" type="text/css" href="layout.css">	
         </head>
         <body>
+        <?php 
+            if (count($tickets) > 0) 
+            {
+                echo count($tickets)
+            ?>
             <table>
                 <tr>
                     <th>Sequence Number</th>
@@ -206,7 +211,14 @@
                     <td><?php echo $tickets[$currentTicket]['categoryTitle']."\t"; ?></td>                    
                     <td><?php echo $tickets[$currentTicket]['description']; ?></td>
                 </tr>
-            </table>          
+            </table> 
+        <?php
+            } 
+            else 
+            {
+                echo "<h2>No tickets left to resolve or elevate</h2>";
+            }  
+        ?>           
             <br><br>
             <form action="" method="post">
                 <input type="text" name="search_ticket_id" placeholder="Search by ticket ID">
